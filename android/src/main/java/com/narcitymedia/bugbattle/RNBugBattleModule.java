@@ -21,8 +21,6 @@ import bugbattle.io.bugbattle.controller.BugBattleNotInitialisedException;
 public class RNBugBattleModule extends ReactContextBaseJavaModule {
 
     private static String NATIVE_MODULE_NAME = "RNBugBattle";
-    private static String ACTIVATION_NONE = "NONE";
-    private static String ACTIVATION_SHAKE = "SHAKE";
 
     public RNBugBattleModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -31,14 +29,6 @@ public class RNBugBattleModule extends ReactContextBaseJavaModule {
     @Override
     public String getName() {
         return RNBugBattleModule.NATIVE_MODULE_NAME;
-    }
-
-    @Override
-    public Map<String, Object> getConstants() {
-        final Map<String, Object> constants = new HashMap<>();
-        constants.put(RNBugBattleModule.ACTIVATION_NONE, BugBattleActivationMethod.NONE.toString());
-        constants.put(RNBugBattleModule.ACTIVATION_SHAKE, BugBattleActivationMethod.SHAKE.toString());
-        return constants;
     }
 
     @ReactMethod

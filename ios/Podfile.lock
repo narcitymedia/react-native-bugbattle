@@ -1,0 +1,16 @@
+PODS:
+  - BugBattle (2.1.0)
+
+DEPENDENCIES:
+  - BugBattle
+
+SPEC REPOS:
+  trunk:
+    - BugBattle
+
+SPEC CHECKSUMS:
+  BugBattle: df1d7af50c4db639dd9c540023095d6fe3fc3007
+
+PODFILE CHECKSUM: 88055249ea5b24ff7a48e983930bb4cbb48041f0
+
+COCOAPODS: 1.9.0.beta.3

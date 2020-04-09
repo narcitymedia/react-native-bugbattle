@@ -7,7 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B3E7B58A1CC2AC0600A0062D /* Bugbattle.m in Sources */ = {isa = PBXBuildFile; fileRef = B3E7B5891CC2AC0600A0062D /* Bugbattle.m */; };
+		1C26F7E2243F7F3200366E80 /* RNBugBattle.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C26F7E0243F7F3200366E80 /* RNBugBattle.m */; };
+		1C26F7E5243F8C3C00366E80 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C26F7E4243F8C3C00366E80 /* UIColor+HexString.m */; };
+		6AB0FB163D27C85B2B5920CB /* Pods_Bugbattle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2226186F2B9B8B6EC4A47D /* Pods_Bugbattle.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,8 +26,13 @@
 
 /* Begin PBXFileReference section */
 		134814201AA4EA6300B7C361 /* libBugbattle.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libBugbattle.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		B3E7B5881CC2AC0600A0062D /* Bugbattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Bugbattle.h; sourceTree = "<group>"; };
-		B3E7B5891CC2AC0600A0062D /* Bugbattle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Bugbattle.m; sourceTree = "<group>"; };
+		1C26F7E0243F7F3200366E80 /* RNBugBattle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNBugBattle.m; sourceTree = "<group>"; };
+		1C26F7E1243F7F3200366E80 /* RNBugBattle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNBugBattle.h; sourceTree = "<group>"; };
+		1C26F7E3243F8C1400366E80 /* UIColor+HexString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		1C26F7E4243F8C3C00366E80 /* UIColor+HexString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		39B050AAF068F94BC438C321 /* Pods-Bugbattle.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bugbattle.release.xcconfig"; path = "Target Support Files/Pods-Bugbattle/Pods-Bugbattle.release.xcconfig"; sourceTree = "<group>"; };
+		8BD9E3148742C1C68591596C /* Pods-Bugbattle.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bugbattle.debug.xcconfig"; path = "Target Support Files/Pods-Bugbattle/Pods-Bugbattle.debug.xcconfig"; sourceTree = "<group>"; };
+		DC2226186F2B9B8B6EC4A47D /* Pods_Bugbattle.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bugbattle.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6AB0FB163D27C85B2B5920CB /* Pods_Bugbattle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -47,12 +55,33 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		292215CC75E3FC7C5F54DF39 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BD9E3148742C1C68591596C /* Pods-Bugbattle.debug.xcconfig */,
+				39B050AAF068F94BC438C321 /* Pods-Bugbattle.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		332A27F8B862E39230F278FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DC2226186F2B9B8B6EC4A47D /* Pods_Bugbattle.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		58B511D21A9E6C8500147676 = {
 			isa = PBXGroup;
 			children = (
-				B3E7B5881CC2AC0600A0062D /* Bugbattle.h */,
-				B3E7B5891CC2AC0600A0062D /* Bugbattle.m */,
+				1C26F7E4243F8C3C00366E80 /* UIColor+HexString.m */,
+				1C26F7E3243F8C1400366E80 /* UIColor+HexString.h */,
+				1C26F7E1243F7F3200366E80 /* RNBugBattle.h */,
+				1C26F7E0243F7F3200366E80 /* RNBugBattle.m */,
 				134814211AA4EA7D00B7C361 /* Products */,
+				292215CC75E3FC7C5F54DF39 /* Pods */,
+				332A27F8B862E39230F278FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,6 +92,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 58B511EF1A9E6C8500147676 /* Build configuration list for PBXNativeTarget "Bugbattle" */;
 			buildPhases = (
+				6B85AEFF731A4EDC1C4F0929 /* [CP] Check Pods Manifest.lock */,
 				58B511D71A9E6C8500147676 /* Sources */,
 				58B511D81A9E6C8500147676 /* Frameworks */,
 				58B511D91A9E6C8500147676 /* CopyFiles */,
@@ -95,6 +125,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 58B511D21A9E6C8500147676;
@@ -107,12 +138,38 @@
 		};
 /* End PBXProject section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		6B85AEFF731A4EDC1C4F0929 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bugbattle-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		58B511D71A9E6C8500147676 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B3E7B58A1CC2AC0600A0062D /* Bugbattle.m in Sources */,
+				1C26F7E5243F8C3C00366E80 /* UIColor+HexString.m in Sources */,
+				1C26F7E2243F7F3200366E80 /* RNBugBattle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,9 +271,10 @@
 		};
 		58B511F01A9E6C8500147676 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BD9E3148742C1C68591596C /* Pods-Bugbattle.debug.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
-				"$(inherited)",
+					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
 					"$(SRCROOT)/../../../React/**",
 					"$(SRCROOT)/../../react-native/React/**",
@@ -230,6 +288,7 @@
 		};
 		58B511F11A9E6C8500147676 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 39B050AAF068F94BC438C321 /* Pods-Bugbattle.release.xcconfig */;
 			buildSettings = {
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
