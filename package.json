@@ -1,0 +1,38 @@
+{
+  "name": "react-native-bugbattle",
+  "title": "React Native Bugbattle",
+  "version": "1.0.0",
+  "description": "A React Native wrapper around the native BugBattle SDKs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/narcitymedia/react-native-bugbattle.git",
+    "baseUrl": "https://github.com/narcitymedia/react-native-bugbattle"
+  },
+  "keywords": [
+    "react-native",
+    "bug-reporting",
+    "reporting",
+    "feedback",
+    "in-app-feedback",
+    "user-experience"
+  ],
+  "author": {
+    "name": "Yanick Bélanger",
+    "email": "yanick@narcitymedia.com"
+  },
+  "license": "MIT",
+  "licenseFilename": "LICENSE",
+  "readmeFilename": "README.md",
+  "peerDependencies": {
+    "react": "^16.8.1",
+    "react-native": ">=0.60.0 <1.0.x"
+  },
+  "devDependencies": {
+    "react": "^16.9.0",
+    "react-native": "^0.61.5"
+  }
+}
