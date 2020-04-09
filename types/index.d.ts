@@ -1,6 +1,19 @@
 
 declare module "react-native-bugbattle" {
-    export interface BugBattleStatic {
+    interface BugBattleActivationMethodStatic {
+        /**
+        * When using this activation method, you will need to call `startBugReporting()` yourself.
+        */
+        NONE: "NONE";
+
+        /**
+         * When using this method, BugBattle will listen for shake gesture and trigger the
+         * bug reporting UI automatically. You can still call `startBugReporting()` manually.
+         */
+        SHAKE: "SHAKE";
+    }
+
+    interface BugBattleStatic {
         /**
          * Initialises the BugBattle SDK with the provided options.
          * @param {string} apiKey The BugBattle API key, can be found on the online dashboard.
@@ -38,6 +51,8 @@ declare module "react-native-bugbattle" {
          */
         trackStep(type: string, data: string): void;
     }
+
+    export const BugBattleActivationMethod: BugBattleActivationMethodStatic;
 
     const BugBattle: BugBattleStatic;
     export default BugBattle;
