@@ -45,31 +45,31 @@ import BugBattle, { BugBattleActivationMethod } from 'react-native-bugbattle';
 
 ### Common scenarios
 
-- Initialising the SDK
+#### Initialising the SDK
 
 ```js
 BugBattle.initialise("YOUR_API_KEY", BugBattleActivationMethod.SHAKE);
 ```
 
-- Manually starting the bug reporting flow
+#### Manually starting the bug reporting flow
 
 ```js
 BugBattle.startBugReporting();
 ```
 
-- Changing the bug reporting UI color
+#### Changing the bug reporting UI color
 
 ```js
 BugBattle.setAppBarColor("#AAAAAA");
 ```
 
-- Prefilling the user email in the bug reporting UI
+#### Prefilling the user email in the bug reporting UI
 
 ```js
 BugBattle.setUserEmail("example@domain.com");
 ```
 
-- Attaching custom data to a report
+#### Attaching custom data to a report
 
 ```js
 BugBattle.attachCustomData({
@@ -79,7 +79,7 @@ BugBattle.attachCustomData({
 });
 ```
 
-- Tracking custom steps
+#### Tracking custom steps
 
 ```js
 BugBattle.trackStep("SCREEN_VIEW", "HOME SCREEN");
