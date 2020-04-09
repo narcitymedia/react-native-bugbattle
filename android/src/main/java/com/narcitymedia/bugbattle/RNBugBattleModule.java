@@ -1,15 +1,18 @@
 package com.narcitymedia.bugbattle;
 
 import android.app.Activity;
-import android.app.Application;
 import android.util.Log;
 
-import com.facebook.react.bridge.Callback;
 import com.facebook.react.bridge.Promise;
 import com.facebook.react.bridge.ReactApplicationContext;
 import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.ReadableMap;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import javax.annotation.Nullable;
 
 import bugbattle.io.bugbattle.BugBattle;
 import bugbattle.io.bugbattle.controller.BugBattleActivationMethod;
@@ -18,6 +21,8 @@ import bugbattle.io.bugbattle.controller.BugBattleNotInitialisedException;
 public class RNBugBattleModule extends ReactContextBaseJavaModule {
 
     private static String NATIVE_MODULE_NAME = "RNBugBattle";
+    private static String ACTIVATION_NONE = "NONE";
+    private static String ACTIVATION_SHAKE = "SHAKE";
 
     public RNBugBattleModule(ReactApplicationContext reactContext) {
         super(reactContext);
@@ -28,12 +33,24 @@ public class RNBugBattleModule extends ReactContextBaseJavaModule {
         return RNBugBattleModule.NATIVE_MODULE_NAME;
     }
 
+    @Override
+    public Map<String, Object> getConstants() {
+        final Map<String, Object> constants = new HashMap<>();
+        constants.put(RNBugBattleModule.ACTIVATION_NONE, BugBattleActivationMethod.NONE.toString());
+        constants.put(RNBugBattleModule.ACTIVATION_SHAKE, BugBattleActivationMethod.SHAKE.toString());
+        return constants;
+    }
+
     @ReactMethod
-    public void initialise(String apiKey, BugBattleActivationMethod method) {
+    public void initialise(String apiKey, String activationMethod) {
         Activity currentActivity = this.getCurrentActivity();
 
         if (currentActivity != null) {
-            BugBattle.initialise(apiKey, method, currentActivity.getApplication());
+            BugBattle.initialise(
+                apiKey,
+                BugBattleActivationMethod.valueOf(activationMethod),
+                currentActivity.getApplication()
+            );
         }
 
         else {
