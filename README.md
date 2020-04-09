@@ -85,8 +85,6 @@ BugBattle.attachCustomData({
 BugBattle.trackStep("SCREEN_VIEW", "HOME SCREEN");
 ```
 
-### API Definition
-
 
 
 

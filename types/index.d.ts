@@ -6,7 +6,7 @@ declare module "react-native-bugbattle" {
          * @param {string} apiKey The BugBattle API key, can be found on the online dashboard.
          * @param {string} activationMethod The activation method to use, can be either `NONE` or `SHAKE`. 
          */
-        initialise(apiKey: string, activationMethod: string): void;
+        initialise(apiKey: string, activationMethod: "NONE" | "SHAKE"): void;
 
         /**
          * Manually starts the bug reporting flow.
