@@ -3,7 +3,8 @@
   "title": "React Native Bugbattle",
   "version": "1.0.0",
   "description": "A React Native wrapper around the native BugBattle SDKs",
-  "main": "index.js",
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

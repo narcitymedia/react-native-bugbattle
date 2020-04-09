@@ -1,7 +1,7 @@
-#import "Bugbattle.h"
+#import "RNBugbattle.h"
 
 
-@implementation Bugbattle
+@implementation RNBugbattle
 
 RCT_EXPORT_MODULE()
 

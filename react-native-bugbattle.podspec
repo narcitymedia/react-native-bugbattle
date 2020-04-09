@@ -7,14 +7,14 @@ Pod::Spec.new do |s|
   s.version      = package["version"]
   s.summary      = package["description"]
   s.description  = <<-DESC
-                  react-native-bugbattle
+                  A React Native wrapper around the native BugBattle SDKs
                    DESC
   s.homepage     = "https://github.com/narcitymedia/react-native-bugbattle"
   # brief license entry:
   s.license      = "MIT"
   # optional - use expanded license entry instead:
   # s.license    = { :type => "MIT", :file => "LICENSE" }
-  s.authors      = { "Your Name" => "yourname@email.com" }
+  s.authors      = { "Yanick Bélanger" => "yanick@narcitymedia.com" }
   s.platforms    = { :ios => "9.0" }
   s.source       = { :git => "https://github.com/narcitymedia/react-native-bugbattle.git", :tag => "#{s.version}" }
 
@@ -22,7 +22,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
 
   s.dependency "React"
-  # ...
-  # s.dependency "..."
+  s.dependency "BugBattle"
 end
 
