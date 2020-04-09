@@ -20,7 +20,9 @@ RCT_EXPORT_METHOD(initialise:(NSString *)apiKey withActivationMethod:(NSString *
 
 RCT_EXPORT_METHOD(startBugReporting)
 {
-    [BugBattle startBugReporting];
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [BugBattle startBugReporting];
+    });
 }
 
 RCT_EXPORT_METHOD(setAppBarColor:(NSString *)hexColor)
