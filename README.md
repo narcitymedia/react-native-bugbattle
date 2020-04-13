@@ -1,3 +1,5 @@
+![BugBattle logo](https://www.bugbattle.io/static/bb-logo-b72b747af3869800cc360db793f6fc68.png)
+
 # React Native BugBattle
 React Native wrapper around the native [BugBattle](https://www.bugbattle.io) SDKs
 
